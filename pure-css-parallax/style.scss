@@ -1,9 +1,17 @@
 body {
   margin: 0;
   padding: 0;
+  // box-sizing: border-box;
+
+  h2 {
+    // width: 100%;
+    // height: 100%;
+    padding: 2rem 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
   .wrapper {
-    width: 100vw;
+    // width: 100vw;
     /* The height needs to be set to a fixed value for the effect to work.
     *100vh is the full height of the viewport. */
     height: 100vh;
@@ -38,6 +46,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    // background-color: rgba(0, 0, 0, 0.3);
 
     /* Move the pseudo-element back away from the camera,
      * then scale it back up to fill the viewport.
@@ -56,10 +65,11 @@ body {
 
   /* Sets the actual background images to adorable kitties. This part is crucial. */
   .bg1::after {
-    background-image: url("images/photo1.jpeg");
+    background: url("images/photo1.jpeg") no-repeat center/cover;
+    // background: rgba(0, 0, 0, 0.3);
   }
 
   .bg2::after {
-    background-image: url("images/photo2.jpeg");
+    background: rgba(0, 0, 0, 0.3) url("images/photo2.jpeg") no-repeat center/cover;
   }
 }
